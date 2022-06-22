@@ -1,3 +1,8 @@
+.root{
+primary:#702b04;
+base:#f9f1e8
+}
+
 .navbar{
 border: none;
 background-color: #f9f1e8;
@@ -27,5 +32,12 @@ color:#702b04;
   color:#702b04;
   }
   .container my-2{
-  container-align:center;
+  form-align:center;
+  }
+  #footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:5rem;   /* Height of the footer */
+   background:none;
   }

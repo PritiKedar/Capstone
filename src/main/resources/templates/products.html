@@ -62,8 +62,8 @@ crossorigin="anonymous">
                  <td th:text ="${product.name}"></td>
                  <td th:text ="${product.imageFileName}"></td>  
           <!--    <td style="background-image: url('/images/abstract-medical-wallpaper-template-design_53876-61802.webp');"> -->
-                  
-          <!--       <img th:src ="/@{${product.imageFileName}}"></td>   -->
+               <td img th:attr = "src =@{${product.imageFileName}}"></td>  
+            <!--     <img th:attr = "src =@{${product.imageFileName}}">  -->
                  <td th:text ="${product.description}"></td>
                  <td th:text ="${product.price}"></td>
                  <td> <a th:href = "@{/showCart/{id}(id =${product.id})}"
@@ -72,6 +72,14 @@ crossorigin="anonymous">
          </tr>        
      </table>
 </div>
+<!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container-footer"><p class="m-0 text-center text-white">Copyright © Chocolateria 2022</p></div>
+    </footer>
+ <script type="text/javascript"
+     th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.2.1/jquery.min.js/}"></script>
+  <script type="text/javascript"
+     th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
 
 </body>
 </html>
