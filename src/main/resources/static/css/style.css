@@ -22,3 +22,10 @@ color:#702b04;
  h3, .h3{
   color:#702b04;
   }
+  
+  h2, .h2{
+  color:#702b04;
+  }
+  .container my-2{
+  container-align:center;
+  }
