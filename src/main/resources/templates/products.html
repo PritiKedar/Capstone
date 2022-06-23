@@ -30,7 +30,7 @@ crossorigin="anonymous">
         <div id="navbar" class="collapse navbar-collapse">
            <ul class="nav navbar-nav">
               <li sec:authorize="isAuthenticated()"><a th:href="@{/}">Home</a></li>
-              <li ><a th:href="@{/products}">Products</a></li>
+              <li sec:authorize="isAuthenticated()"><a th:href="@{/products}">Products</a></li>
               <li sec:authorize="isAuthenticated()"><a th:href="@{/login}">Login</a></li> 
               <li sec:authorize="isAuthenticated()"><a th:href="@{/registration}">Register</a></li>
               <li sec:authorize="isAuthenticated()"><a th:href="@{/showCart}">Cart</a></li>
@@ -60,14 +60,13 @@ crossorigin="anonymous">
          <tbody>
          <tr th:each = "product:${listProducts}">
                  <td th:text ="${product.name}"></td>
-                 <td th:text ="${product.imageFileName}"></td>  
-          <!--    <td style="background-image: url('/images/abstract-medical-wallpaper-template-design_53876-61802.webp');"> -->
-               <td img th:attr = "src =@{${product.imageFileName}}"></td>  
-            <!--     <img th:attr = "src =@{${product.imageFileName}}">  -->
+                 
+               <!--     <td img th:attr = "src =@{${product.imageFileName}}"></td>  -->
+              <img th:attr = "src =@{${product.imageFileName}}">  
                  <td th:text ="${product.description}"></td>
                  <td th:text ="${product.price}"></td>
                  <td> <a th:href = "@{/showCart/{id}(id =${product.id})}"
-                      class = "btn btn-primary">Add to Cart</a></td>
+                      class = "btn" style = "background-color:#702b04">Add to Cart</a></td>
                  
          </tr>        
      </table>
