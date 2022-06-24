@@ -1,0 +1,29 @@
+.product-preview-container{
+  position: relative;
+  display: flex 1fr, 1fr;
+  flex-direction:column;
+  width:40%;
+  word-wrap: break-word;
+  background-color: none;
+  background-clip: border-box;
+  border:0px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+
+
+}
+.product-preview-container image{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container my-2{
+display:flex;
+}
+.ul{
+text-decoration: none;
+}
+
+.product-image{
+max-width:400px;
+}
+.li{
+text-decoration: none;
+}
