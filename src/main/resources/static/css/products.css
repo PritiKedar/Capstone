@@ -1,5 +1,5 @@
 .product-preview-container{
-  position: relative;
+position: relative;
   display: flex 1fr, 1fr;
   flex-direction:column;
   width:40%;
@@ -10,7 +10,11 @@
   border-radius: 0.25rem;
 
 
+ 
+
 }
+
+
 .product-preview-container image{
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

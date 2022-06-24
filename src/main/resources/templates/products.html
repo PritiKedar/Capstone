@@ -57,13 +57,13 @@
 		<h2>Explore our fine chocolates</h2>
 		<div class="product-preview-container" th:each=" product:${listProducts}">
 			<ul style="text-decoration: none">
-				<li><img class="product-image" th:attr="src =@{${product.imageFileName}}" /></li>
+				<ul><img class="product-image" th:attr="src =@{${product.imageFileName}}" /></ul>
 
-				<li><span th:text="${product.name}"></span></li>
-				<li><span th:text="${product.description}"></span></li>
-				<li>$<span th:text="${product.price}"></span></li>
-				<li><span <a th:href="@{/showCart/{id}(id =${product.id})}" class="btn"
-						style="background-color:#b98576">Add to Cart</a></span></li>
+				<ul><span th:text="${product.name}"></span></ul>
+				<ul><span th:text="${product.description}"></span></ul>
+				<ul>$<span th:text="${product.price}"></span></ul>
+				<ul><span <a th:href="@{/showCart/{id}(id =${product.id})}" class="btn"
+						style="background-color:#b98576">Add to Cart</a></span></ul>
 			</ul>
 
 		</div>
