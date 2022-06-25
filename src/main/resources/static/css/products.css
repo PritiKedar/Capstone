@@ -10,8 +10,6 @@ position: relative;
   border-radius: 0.25rem;
 
 
- 
-
 }
 
 
@@ -28,6 +26,4 @@ text-decoration: none;
 .product-image{
 max-width:400px;
 }
-.li{
-text-decoration: none;
-}
+
