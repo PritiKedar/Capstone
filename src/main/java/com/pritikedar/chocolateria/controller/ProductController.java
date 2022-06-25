@@ -1,12 +1,11 @@
 package com.pritikedar.chocolateria.controller;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import com.pritikedar.chocolateria.model.Product;
 import com.pritikedar.chocolateria.service.ProductService;
 
@@ -36,11 +35,24 @@ public class ProductController {
 		return "redirect:/products";
 		
 	}
-//	@GetMapping("/showCart")
-//	public String showCart(@PathVariable (value = "id") long id, Model model) {
-//		return null;
-//		//get product from the service
-//		
+	@GetMapping("/showFormForUpdate/{id}")
+	public String showFormForUpdate(@PathVariable ( value = "id") long id, Model model) {
+		//get product from the service
+		Product product = productService.getProductById(id);
+		
+		//set product as a model attribute to pre-populate the form
+		model.addAttribute("product", product);
+		
+		return "update_product";
+		
+	}
 //	
+//	@GetMapping("/products/?name")
+//	public String viewProduct(Model model) {
+//		model.addAttribute("listProducts", productService.findByNameContaining(String infix);
+//		return "products";
 //	}
-}
+//	
+	
+	}
+

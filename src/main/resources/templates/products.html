@@ -51,6 +51,7 @@
 	<!-- using bootstrap CSS for btn -->
 	<div align="left" class="container">
 		<a th:href="@{/showNewProductForm}" class="btn btn-sm mb-3"> Add new Product </a>
+		
 	</div>
 	<div align="center" class="container my-2">
 
@@ -58,10 +59,12 @@
 		<div class="product-preview-container" th:each=" product:${listProducts}">
 			<ul style="text-decoration: none">
 				<ul><img class="product-image" th:attr="src =@{${product.imageFileName}}" /></ul>
-
 				<ul><span th:text="${product.name}"></span></ul>
 				<ul><span th:text="${product.description}"></span></ul>
 				<ul>$<span th:text="${product.price}"></span></ul>
+				<ul><span <a th:href="@{/showFormForUpdate/{id}(id =${product.id})}" class="btn"
+						style="background-color:#b98576">Update Product</a></span></ul>
+						<br>
 				<ul><span <a th:href="@{/showCart/{id}(id =${product.id})}" class="btn"
 						style="background-color:#b98576">Add to Cart</a></span></ul>
 			</ul>
