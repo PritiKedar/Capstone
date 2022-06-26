@@ -64,11 +64,11 @@
 			<td><ul><h3><span th:text="${product.name}"></span></h3></ul>
 				<ul><h4><span th:text="${product.description}"></span></h4></ul>
 				<ul><h4>$<span th:text="${product.price}"></span></h4></ul>
-				<ul><span <a th:href="@{/showFormForUpdate/{id}(id =${product.id})}" class="btn"
-						style="background-color:#b98576">Update Product</a></span></ul>
+				<ul> <a th:href="@{/showFormForUpdate/{id}(id =${product.id})}" class="btn"
+						style="background-color:#b98576">Update Product</a></ul>
 						<br>
-				<ul><span <a th:href="@{/showCart/{id}(id =${product.id})}" class="btn"
-						style="background-color:#b98576">Add to Cart</a></span></ul>
+				<ul> <a th:href="@{/showCart/{id}(id =${product.id})}" class="btn"
+						style="background-color:#b98576">Add to Cart</a></ul>
 			</ul></td>
          </tr>
 		</div>

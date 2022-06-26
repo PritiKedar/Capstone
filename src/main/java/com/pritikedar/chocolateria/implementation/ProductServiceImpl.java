@@ -40,6 +40,12 @@ public class ProductServiceImpl implements ProductService {
 		return product;
 	}
 
+	@Override
+	public void deleteProductById(long id) {
+		this.productRepository.deleteById(id);
+		
+	}
+
 //	@Override
 //	public List<Product> findProductByName(String name) {
 //		List<Product> products = productRepository.findByNameContaining(String infix);
