@@ -55,3 +55,6 @@ background-color: b98576;
   .main-display{
   display: flex;
   }
+  .search{
+  margin-right:5%;
+  }

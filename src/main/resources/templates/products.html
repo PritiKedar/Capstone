@@ -56,20 +56,24 @@
 	<div align="center" class="container my-2">
 
 		<h2>Explore our fine chocolates</h2>
+		<table>
+		
 		<div class="product-preview-container" th:each=" product:${listProducts}">
-			<ul style="text-decoration: none">
-				<ul><img class="product-image" th:attr="src =@{${product.imageFileName}}" /></ul>
-				<ul><span th:text="${product.name}"></span></ul>
-				<ul><span th:text="${product.description}"></span></ul>
-				<ul>$<span th:text="${product.price}"></span></ul>
+		<tr>	<ul style="text-decoration: none">
+			<td><ul><img class="product-image" th:attr="src =@{${'/images/'+product.imageFileName}}" /></ul></td>
+			<td><ul><h3><span th:text="${product.name}"></span></h3></ul>
+				<ul><h4><span th:text="${product.description}"></span></h4></ul>
+				<ul><h4>$<span th:text="${product.price}"></span></h4></ul>
 				<ul><span <a th:href="@{/showFormForUpdate/{id}(id =${product.id})}" class="btn"
 						style="background-color:#b98576">Update Product</a></span></ul>
 						<br>
 				<ul><span <a th:href="@{/showCart/{id}(id =${product.id})}" class="btn"
 						style="background-color:#b98576">Add to Cart</a></span></ul>
-			</ul>
-
+			</ul></td>
+         </tr>
 		</div>
+		
+		</table>
 	</div>
 	<!-- Footer-->
 	<footer class="py-5 bg-dark">
