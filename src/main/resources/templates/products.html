@@ -50,24 +50,14 @@
 
 	<!-- using bootstrap CSS for btn -->
 	<div align="left" class="container">
-		<a th:href="@{/showNewProductForm}" class="btn btn-sm mb-3" style="background-color:#b98576"> Add new Product </a>
-
-	</div>
-	<div class="outer-dropdown">
-		<div class="dropdown">
-			<button class="btn" style="background-color:#b98576">Sort</button>
-			<div class="dropdown-content">
-				<a href="#">By name</a>
-				<a href="#">Price:High-low</a>
-				<a href="#">Price:Low-high</a>
-			</div>
-		</div>
+		<a th:href="@{/showNewProductForm}" class="btn btn-sm mb-3"> Add new Product </a>
+		
 	</div>
 	<div align="center" class="container my-2">
 
 		<h2>Explore our fine chocolates</h2>
-
 		<table>
+<<<<<<< Updated upstream
 
 			<div class="product-preview-container" th:each=" product:${listProducts}">
 				<tr>
@@ -95,6 +85,24 @@
 				</tr>
 			</div>
 
+=======
+		
+		<div class="product-preview-container" th:each=" product:${listProducts}">
+		<tr>	<ul style="text-decoration: none">
+			<td><ul><img class="product-image" th:attr="src =@{${'/images/'+product.imageFileName}}" /></ul></td>
+			<td><ul><h3><span th:text="${product.name}"></span></h3></ul>
+				<ul><h4><span th:text="${product.description}"></span></h4></ul>
+				<ul><h4>$<span th:text="${product.price}"></span></h4></ul>
+				<ul> <a th:href="@{/showFormForUpdate/{id}(id =${product.id})}" class="btn"
+						style="background-color:#b98576">Update Product</a></ul>
+						<br>
+				<ul> <a th:href="@{/showCart/{id}(id =${product.id})}" class="btn"
+						style="background-color:#b98576">Add to Cart</a></span></ul>
+			</ul></td>
+         </tr>
+		</div>
+		
+>>>>>>> Stashed changes
 		</table>
 	</div>
 	<!-- Footer-->
