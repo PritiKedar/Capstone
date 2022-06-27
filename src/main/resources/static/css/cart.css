@@ -29,12 +29,6 @@ font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
 }
 
 
-/* Apply clearfix in a few places */
-.shopping-cart, .column-labels, .product, .totals-item {
-  @extend .group;
-}
-
-
 /* Apply dollar signs */
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
   content: '$';
@@ -61,14 +55,7 @@ label {
 }
 
 
-/* Column headers */
-.column-labels {
-  label :
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid color-border;
-  
-  }
+
   
   .product-image, .product-details, .product-removal {
     text-indent: -9999px;
@@ -78,93 +65,12 @@ label {
 
 /* Product entries */
 .product {
+
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid color-border;
   
-  .product-image {
-    text-align: center;
-    img {
-      width: 100px;
-    }
-  }
-  
-  .product-details {
-    .product-title {
-      margin-right: 20px;
-      font-family: font-bold;
-    }
-    .product-description {
-      margin: 5px 20px 5px 0;
-      line-height: 1.4em;
-    }
-  }
-  
-  .product-quantity {
-    input {
-      width: 40px;
-      
-    }
-  }
-  
-  .remove-product {
-    border: 0;
-    padding: 4px 8px;
-    background-color: #c66;
-    color: #fff;
-    font-family: $font-bold;
-    font-size: 12px;
-    border-radius: 3px;
-  }
-  
-  .remove-product:hover {
-    background-color: #a44;
-  }
-}
-
-
-/* Totals section */
-.totals {
-  .totals-item {
-    float: right;
-    clear: both;
-    width: 100%;
-    margin-bottom: 10px;
-    
-    label {
-      float: left;
-      clear: both;
-      width: 79%;
-      text-align: right;
-    }
-    
-    .totals-value {
-      float: right;
-      width: 21%;
-      text-align: right;
-    }
-  }
-  
-  .totals-item-total {
-    font-family: $font-bold;
-  }
-}
-
-.checkout {
-  float: right;
-  border: 0;
-  margin-top: 20px;
-  padding: 6px 25px;
-  background-color: #6b6;
-  color: #fff;
-  font-size: 25px;
-  border-radius: 3px;
-}
-
-.checkout:hover {
-  background-color: #494;
-}
-
+ 
 /* Make adjustments for tablet */
 @media screen and (max-width: 650px) {
   
@@ -179,11 +85,9 @@ label {
   }
   
   .product-image {
-    float: right;
-    width: auto;
-    img {
-      margin: 0 0 10px 10px;
-    }
+  width:20%;
+    
+   
   }
   
   .product-details {
@@ -198,7 +102,7 @@ label {
   }
   
   .product-quantity {
-    width: 100px;
+    width: 10px;
     input {
       margin-left: 20px;
     }
@@ -249,4 +153,4 @@ label {
       }
     }
   }
-}
+}}

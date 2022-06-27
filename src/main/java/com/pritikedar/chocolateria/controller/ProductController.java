@@ -54,6 +54,12 @@ public class ProductController {
 		return "redirect:/products";
 		
 	}
+	
+	@GetMapping("/cart")
+	public String viewCart(Model model) {
+		
+		return "cart";
+	}
 //	
 //	@GetMapping("/products/?name")
 //	public String viewProduct(Model model) {

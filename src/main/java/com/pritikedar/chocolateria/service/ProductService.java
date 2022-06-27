@@ -9,6 +9,7 @@ public interface ProductService {
 	void saveProduct(Product product);
 	Product getProductById(long id);
 	void deleteProductById(long id);
+	void viewCart();
 	//	List<Product> findByNameContaining(String name);
 	
 

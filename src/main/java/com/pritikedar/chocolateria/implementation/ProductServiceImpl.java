@@ -46,6 +46,12 @@ public class ProductServiceImpl implements ProductService {
 		
 	}
 
+	@Override
+	public void viewCart() {
+		
+		
+	}
+
 //	@Override
 //	public List<Product> findProductByName(String name) {
 //		List<Product> products = productRepository.findByNameContaining(String infix);

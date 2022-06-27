@@ -3,8 +3,8 @@
 .new-product{
 position:center;
 display:flex;
-margin-left:15%;
-width:70%;
+margin-left:25%;
+width:50%;
 grid-template-columns:1fr, 3fr, 1fr;
 flex-direction:column;
 float:center;
