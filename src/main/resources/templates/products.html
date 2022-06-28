@@ -88,7 +88,7 @@
 							<ul> <a th:href="@{/showFormForUpdate/{id}(id =${product.id})}" class="btn"
 									style="background-color:#b98576">Update Product</a></ul>
 							<br>
-							<ul> <a href="@{/cart}" class="btn"
+							<ul> <a th:href="@{/cart}" class="btn btn-cart"
 									style="background-color:#b98576">Add to Cart</a></ul>
 					</ul>
 					</td>
@@ -107,7 +107,7 @@
 		th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.2.1/jquery.min.js/}"></script>
 	<script type="text/javascript"
 		th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
-
+    <script src ="js/cart.js"></script>
 </body>
 
 </html>

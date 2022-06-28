@@ -42,19 +42,28 @@
 					<li><a th:href="@{/products}">Products</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/login}">Login</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/registration}">Register</a></li>
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/cart}">
-							<ion-icon name="basket"></ion-icon>Cart<span>0</span>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/cart}">Cart <span></span>
 						</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
 				</ul>
 			</div>
 		</div>
+
 	</nav>
-	<h2>Shopping Cart</h2>
+	</div>
+	<div class = cart-header>
+		<h2>Shopping Cart</h2>
+	</div>
+	<div class="cart-message">
+	<div class = "cart-image"></div>
+	<img src = "/images/chocolate-drizzle.gif">
+		<p><h2>For the safety of Customers and our Chocolate, online orders and shipping is closed in summer months during June - September.
+		You can visit our local store or call  ahead for a curb-side order pickup!!! </h2>
+		</p>
+		
+	</div>
 
 
-
-	
 	<!-- Footer-->
 	<footer class="py-5 bg-dark">
 		<div id="footer">
