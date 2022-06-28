@@ -41,7 +41,7 @@
 					<li><a th:href="@{/products}">Products</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/login}">Login</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/registration}">Register</a></li>
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/showCart}">Cart</a></li>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/cart}">Cart</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
 				</ul>
 			</div>

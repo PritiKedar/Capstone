@@ -15,6 +15,15 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	public Product(long id, String name, float price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
 	private String name;
 
 	private String description;

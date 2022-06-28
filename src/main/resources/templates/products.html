@@ -41,7 +41,7 @@
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/products}">Products</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/login}">Login</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/registration}">Register</a></li>
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/Cart}">Cart</a></li>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/cart}">Cart</a></li>
 					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
 				</ul>
 			</div>
@@ -88,7 +88,7 @@
 							<ul> <a th:href="@{/showFormForUpdate/{id}(id =${product.id})}" class="btn"
 									style="background-color:#b98576">Update Product</a></ul>
 							<br>
-							<ul> <a href="@{/viewCart}" class="btn"
+							<ul> <a href="@{/cart}" class="btn"
 									style="background-color:#b98576">Add to Cart</a></ul>
 					</ul>
 					</td>
