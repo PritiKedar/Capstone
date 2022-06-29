@@ -21,7 +21,7 @@ public class ProductRepositoryTests {
 	@Autowired
 	private ProductRepository productRepository;
 	
-	//Junit test for saveProduct
+	//Junit test for getProduct
 	
 	@Test
 	public void getProductTest() {

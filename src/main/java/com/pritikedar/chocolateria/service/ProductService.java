@@ -10,7 +10,8 @@ public interface ProductService {
 	Product getProductById(long id);
 	void deleteProductById(long id);
 	void viewCart();
-	//	List<Product> findByNameContaining(String name);
+	List<Product> sortProducts(float price);
+	List<Product> sortProducts_desc(float price);
 	
-
+	//return (List<Product>) productRepository.findAll(Sort.by(Sort.Direction.ASC, "price"));
 }

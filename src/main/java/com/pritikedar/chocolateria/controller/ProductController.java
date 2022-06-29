@@ -60,6 +60,21 @@ public class ProductController {
 		
 		return "cart";
 	}
+	
+	//display list of products in ascending price
+		@GetMapping("/products/sort_ascending")
+		public String sortProducts_asc(Model model) {
+			model.addAttribute("listProducts", productService.sortProducts(0));
+			return "products";
+		}
+		
+		//display list of products in ascending price
+				@GetMapping("/products/sort_descending")
+				public String sortProducts_desc(Model model) {
+					model.addAttribute("listProducts", productService.sortProducts_desc(0));
+					return "products";
+				}
+		
 //	
 //	@GetMapping("/products/?name")
 //	public String viewProduct(Model model) {

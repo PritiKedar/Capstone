@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import com.pritikedar.chocolateria.model.Product;
 import com.pritikedar.chocolateria.repository.ProductRepository;
@@ -51,6 +52,19 @@ public class ProductServiceImpl implements ProductService {
 		
 		
 	}
+
+	@Override
+	public List<Product> sortProducts(float price) {
+		
+		return (List<Product>) productRepository.findAll(Sort.by(Sort.Direction.ASC, "price"));
+	}
+
+	@Override
+	public List<Product> sortProducts_desc(float price) {
+		
+		return (List<Product>) productRepository.findAll(Sort.by(Sort.Direction.DESC, "price"));
+	}
+
 
 //	@Override
 //	public List<Product> findProductByName(String name) {
