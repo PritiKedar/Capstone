@@ -1,57 +1,176 @@
-
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" type="text/css"
-  th:href="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css"
+		th:href="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+	<link rel="stylesheet" href="css/style.css">
 
-
-<title>Registration</title>
+	<title>Index</title>
 </head>
+
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-     <div class="container">
-        <div class="navbar-header">
-           <button type="button" class="navbar-toggle collapsed"
-              data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-              aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span> <span
-                 class="icon-bar"></span> <span class="icon-bar"></span> <span
-                 class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="#" th:href="@{/}">Registration and
-              Login Module</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-           <ul class="nav navbar-nav">
-              <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
-           </ul>
-        </div>
-     </div>
-  </nav>
+	<style type="text/css">
+		html,
+		body {
+			background-color: #f9f1e8;
+		}
+	</style>
+	<nav class="navbar navbar-inverse ">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/}">
+					<h1>Chocolateria</h1>
+				</a>
+				<br>
+				<br>
+				<br>
+				<h3>Delicious variety of home-made organic chocolates</h3>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/}">Home</a></li>
+					<li><a th:href="@{/products}">Products</a></li>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/login}">Login</a></li>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/registration}">Register</a></li>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/cart}">Cart</a></li>
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<div class="container-email">
+		<p>
+			Welcome <span sec:authentication="principal.username">User</span>
+		</p>
+	</div>
+	<div id="locations">
+		<div class="search" align="right">
+			<form action="/product/search" class="productSearch">
+				<div class="input-group">
+					<input id="searchBar" class="form-control" type="search" name="q" placeholder="Search Candies">
+					<div class="input-group-button">
+						<button class="btn btn-default" type="submit"><a th:href="@{/products}">Go</a></button>
+					</div>
+				</div>
+			</form>
+			<div class="main-display">
+				<div align="left" class="locate">
+					<h3>Location</h3>
+					<p>21 E Candy street</p>
+					<p>Candytown, PA 18901</p>
+					<h3>Contact Us</h3>
+					<p><a href="tel:(123)456-789">(123)456-789</a></p>
+					<p><a href="mailto:info@chocolateria.com">info@chocolateria.com</a></p>
+					<h3>Store Hours</h3>
+					<p>
+						<span>Sunday:</span> 11:00 AM - 4:00 PM
+					</p>
+					<p>
+						<span>Monday:</span> 10:00 AM - 6:00 PM
+					</p>
+					<p>
+						<span>Tuesday:</span> 10:00 AM - 6:00 PM
+					</p>
+					<p>
+						<span>Wednesday:</span> 10:00 AM - 6:00 PM
+					</p>
+					<p>
+						<span>Thursday:</span> 10:00 AM - 6:00 PM
+					</p>
+					<p>
+						<span>Friday:</span> 10:00 AM - 6:00 PM
+					</p>
+					<p>
+						<span>Saturday:</span> 10:00 AM - 5:00 PM
+					</p>
+				</div>
+				<div align="center" class="main-image">
+					<image src="\images\home.png">
+				</div>
+				<div align ="right" class ="some-gif"><image src ="\images\6q1s.gif"</div>
+			</div>
+		</div>
+		<div align="center">
+			<h3>Treat yourself with our fine chocolates</h3>
+			<div id="contact">
 
-  <br>
-  <br>
-  <div class="container">
-     <h2>User Registration and Login Module using Spring Boot, Spring
-        MVC, Spring Security, JPA/Hibernate and Thymeleaf</h2>
+				<div class="container">
+					<div class="row">
+						<h2>Stop In</h2>
+					</div>
+					<div id="locations">
 
-     <p>
-        Welcome <span sec:authentication="principal.username">User</span>
-     </p>
-  </div>
+						<div class="container">
+							<div class="row">
 
-  <script type="text/javascript"
-     th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.2.1/jquery.min.js/}"></script>
-  <script type="text/javascript"
-     th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+							</div>
+							<div id="location-dtown">
+								<div class="container">
+									<div class="row">
+
+									</div>
+								</div>
+
+								<div id="contactForm">
+									<div class="container">
+										<h2>Looking for Something Special?</h2>
+										<h2>Please get in touch, we would love to hear from you!</h2>
+										<div id="wrapper">
+											<form class="forms" id="cForm" data-parsley-validate="" method="post"
+												action="" accept-charset="UTF-8" novalidate="">
+												<span class="blitz-inject blitz-inject--injected" id="blitz-inject-3"
+													data-blitz-id="3" data-blitz-uri="/actions/blitz/csrf/input"
+													data-blitz-params=""><input type="hidden" name="CRAFT_CSRF_TOKEN"
+														value="fWPASafekssZgF6XwdWYANCt304HP7WOHPP2jhEoiP-TytfoKoMbqDgu7RPi7fi8euM94q7iyTKJ3p0oMHPxyXGhgclFSvuU4JWxonP3L8U="></span>
+												<input type="hidden" name="action" value="contact-form/send">
+												<label for="fromName">Name</label>
+												<input id="fromName" data-parsley-required=""
+													data-parsley-required-message="" type="text" name="fromName"
+													value="">
+												<label for="fromEmail">Email</label>
+												<input id="fromEmail" data-parsley-required=""
+													data-parsley-required-message="" type="email" name="fromEmail"
+													value="">
+												<label for="phone">Phone Number</label>
+												<input id="phone" type="text" name="message[Phone]" value="">
+												<label for="message">Message</label>
+												<textarea data-parsley-required="" data-parsley-required-message=""
+													rows="1" cols="20" id="message" name="message[body]"
+													placeholder="Message goes here."></textarea>
+												<button class="blackButton large" type="submit">Send</button>
+												<div id="validationWrapper">
+													<p id="thanks">Your message has been sent. Thank you. We should get
+														back to you shortly.</p>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Footer-->
+						<footer class="py-5 bg-dark">
+							<div class="container-footer">
+								<p class="m-0 text-center text-white">Copyright © Chocolateria 2022</p>
+							</div>
+						</footer>
+						<script type="text/javascript"
+							th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.2.1/jquery.min.js/}"></script>
+						<script type="text/javascript"
+							th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
 
 
 </body>
-</html>
 
+</html>

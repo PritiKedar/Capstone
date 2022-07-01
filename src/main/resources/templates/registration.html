@@ -9,11 +9,12 @@
 <link rel="stylesheet" type="text/css"
   th:href="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
 
-
+<link rel = "stylesheet" href ="css/style.css">
 <title>User Registration</title>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+<style type="text/css">html, body{background-color:#f9f1e8;}</style>
+  <nav class="navbar navbar-inverse ">
      <div class="container">
         <div class="navbar-header">
            <button type="button" class="navbar-toggle collapsed"
@@ -23,8 +24,21 @@
                  class="icon-bar"></span> <span class="icon-bar"></span> <span
                  class="icon-bar"></span>
            </button>
-           <a class="navbar-brand" href="#" th:href="@{/}">Registration and
-              Login Module</a>
+           <a class="navbar-brand" href="#" th:href="@{/}"><h1>Chocolateria</h1></a>
+           <br>
+           <br>
+           <br>
+          <h3>Delicious variety of home-made organic chocolates</h3> 
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+              <li sec:authorize="isAuthenticated()"><a th:href="@{/}">Home</a></li>
+              <li ><a th:href="@{/products}">Products</a></li>
+              <li sec:authorize="isAuthenticated()"><a th:href="@{/login}">Login</a></li> 
+              <li sec:authorize="isAuthenticated()"><a th:href="@{/registration}">Register</a></li>
+              <li sec:authorize="isAuthenticated()"><a th:href="@{/cart}">Cart</a></li>
+              <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+           </ul>
         </div>
      </div>
   </nav>
@@ -38,10 +52,10 @@
 
            <div th:if="${param.success}">
               <div class="alert alert-info">You've successfully registered
-                 to our awesome app!</div>
+                 to Chocolateria!</div>
            </div>
 
-           <h1>Registration</h1>
+           <h2>Registration</h2>
            <form th:action="@{/registration}" th:object="${user}" method="post">
 
               <p class="error-message" th:if="${#fields.hasGlobalErrors()}"
@@ -110,7 +124,7 @@
                     error</p>
               </div>
               <div class="form-group">
-                 <button type="submit" class="btn btn-success">Register</button>
+                 <button type="submit" class="btn" style = "background-color:#b98576">Register</button>
                  <span>Already registered? <a href="/" th:href="@{/login}">Login
                        here</a></span>
               </div>
@@ -119,7 +133,10 @@
         </div>
      </div>
   </div>
-
+<!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div  id="footer"><p class="m-0 text-center text-white">Copyright © Chocolateria 2022</p></div>
+    </footer>
  <script type="text/javascript"
      th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.2.1/jquery.min.js/}"></script>
   <script type="text/javascript"
