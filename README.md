@@ -5,12 +5,19 @@ The application also provides a feature to sort the products in ascending or des
 
 **Technologies used**:
 -Spring boot 2.7.0,
+
 -Spring Framework 5.4.1.Final (Spring MVC and Spring Security), 
+
 -Maven 3.2+, Java 17, Spring Data JPA(Hibernate), 
+
 -HTML, CSS, 
+
 -Mariadb database,
+
 -SQL, 
+
 -Thymleaf
+
 
 ![Home_page](https://user-images.githubusercontent.com/103466469/176535789-5754e446-092f-4eed-a66d-bcb92674cd38.png)
 
